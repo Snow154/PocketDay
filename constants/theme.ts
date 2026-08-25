@@ -1,53 +1,47 @@
-/**
- * Below are the colors that are used in the app. The colors are defined in the light and dark mode.
- * There are many other ways to style your app. For example, [Nativewind](https://www.nativewind.dev/), [Tamagui](https://tamagui.dev/), [unistyles](https://reactnativeunistyles.vercel.app), etc.
- */
-
-import { Platform } from 'react-native';
-
-const tintColorLight = '#0a7ea4';
-const tintColorDark = '#fff';
-
-export const Colors = {
-  light: {
-    text: '#11181C',
-    background: '#fff',
-    tint: tintColorLight,
-    icon: '#687076',
-    tabIconDefault: '#687076',
-    tabIconSelected: tintColorLight,
-  },
-  dark: {
-    text: '#ECEDEE',
-    background: '#151718',
-    tint: tintColorDark,
-    icon: '#9BA1A6',
-    tabIconDefault: '#9BA1A6',
-    tabIconSelected: tintColorDark,
-  },
+export type ThemeColors = {
+  background: string;
+  surface: string;
+  inputBackground: string;
+  secondarySurface: string;
+  text: string;
+  mutedText: string;
+  placeholder: string;
+  primary: string;
+  onPrimary: string;
+  border: string;
+  danger: string;
+  dangerSurface: string;
+  overlay: string;
 };
 
-export const Fonts = Platform.select({
-  ios: {
-    /** iOS `UIFontDescriptorSystemDesignDefault` */
-    sans: 'system-ui',
-    /** iOS `UIFontDescriptorSystemDesignSerif` */
-    serif: 'ui-serif',
-    /** iOS `UIFontDescriptorSystemDesignRounded` */
-    rounded: 'ui-rounded',
-    /** iOS `UIFontDescriptorSystemDesignMonospaced` */
-    mono: 'ui-monospace',
-  },
-  default: {
-    sans: 'normal',
-    serif: 'serif',
-    rounded: 'normal',
-    mono: 'monospace',
-  },
-  web: {
-    sans: "system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif",
-    serif: "Georgia, 'Times New Roman', serif",
-    rounded: "'SF Pro Rounded', 'Hiragino Maru Gothic ProN', Meiryo, 'MS PGothic', sans-serif",
-    mono: "SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace",
-  },
-});
+export const lightTheme: ThemeColors = {
+  background: "#F7F7FB",
+  surface: "#FFFFFF",
+  inputBackground: "#F7F7FB",
+  secondarySurface: "#EEF0F4",
+  text: "#19233A",
+  mutedText: "#7C8494",
+  placeholder: "#9CA3AF",
+  primary: "#6F5CE7",
+  onPrimary: "#FFFFFF",
+  border: "#E5E7EB",
+  danger: "#DC4C4C",
+  dangerSurface: "#FEECEC",
+  overlay: "rgba(0, 0, 0, 0.45)",
+};
+
+export const darkTheme: ThemeColors = {
+  background: "#0E111B",
+  surface: "#191E2D",
+  inputBackground: "#121725",
+  secondarySurface: "#272D3D",
+  text: "#F4F6FC",
+  mutedText: "#A7AFC1",
+  placeholder: "#777F91",
+  primary: "#9385FF",
+  onPrimary: "#FFFFFF",
+  border: "#30374A",
+  danger: "#FF858D",
+  dangerSurface: "#3B222A",
+  overlay: "rgba(0, 0, 0, 0.68)",
+};
